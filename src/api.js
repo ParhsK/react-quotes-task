@@ -49,7 +49,7 @@ async function addNewQuote(text, author) {
   if (!text) {
     throw new APIError("Text is missing");
   }
-  // Dirty hack to allow optional author because backend returns 500 when authos is empty string
+  // Dirty hack to allow optional author because backend returns 500 when author is empty string
   const forcedAuthor = author || " ";
   const newQuote = { text, author: forcedAuthor };
   try {
